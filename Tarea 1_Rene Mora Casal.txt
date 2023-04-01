@@ -77,7 +77,7 @@ Asignar valores iniciales:
 Definir un ciclo o loop FOR/IF/ELSE  
 
 FOR i = 1 to M
-IF caracter "p" cadena NO IGUAL caracter "q" cadena
+IF caracter "p" frase NO IGUAL caracter "q" frase
 THEN palindromo = False
 p = p + 1
 q = q - 1
@@ -90,7 +90,7 @@ FIN
 
 FIN DEL PSEUDOCÍDIGO
 
-**Problema 1**  
+**Problema 2**  
 
 Un servidor crea logs por cada acción que se realiza en él. El administrador desea
 un programa que todos los días borre todos los logs excepto si el log contiene la
@@ -105,7 +105,15 @@ la palabra "error", se borra. Si contiene la palabra "error", copia la línea al
 
 *Paso 2: Planear*  
 
-Se debe verificar periódicamente la hora.  
+Interfaz de usuario: mi programa debe verificar periódicamente la hora. Asimismo debe tener acceso 
+a los directorios "Logs" y "Errores", y acceso a una interfaz de correo. No hay interacción directa 
+con los usuarios.  
+
+Inputs: tiempo (hora), archivos de "logs".  
+
+Outputs: guardar logs con errores en un directorio, mandar correo al administrador.  
+
+Pasos necesarios:  
 
 A una hora determinada, el programa empieza a leer cada log. Supongo que un log es un archivo de 
 caracteres.  
@@ -144,7 +152,66 @@ directorio"Logs" y se manda correo de aviso al administrador.
 
 El programa termina cuando ya no quedan logs en la lista o directorio.  
 
+FIN DEL PSEUDOCÓDIGO.  
 
+**Problema 3**  
 
+Cree una solución que permita al usuario ingresar un número entero. Dado dicho
+número, el programa debe determinar si los dígitos de este número se pueden
+ordenar de forma tal que el resultado sea un múltiplo de 5.  
 
+*Paso 1: Leer y entender el problema.*  
 
+El programa pide al usuario ingresar un número entero.
+
+¿Qué pasa si ingresa un número negativo, o un número con decimales? ¿Puede ser cero?
+
+El programa reporta si el número se puede reacomodar -sus dígitos- para que sea divisible 
+por 5. Se requiere conocer la regla de divisibilidad por 5 (si el número termina en 0 o 5).  
+
+*Paso 2: Planear:*  
+
+Inerfaz de usuario: el programa debe hacer una pregunta al usuario, tal como "ingrese un 
+número entero positivo, mayor o igual a cero". Si se ingresa un número negativo o con 
+decimales, el programa no hará nada, esto es una decisión de diseño.  
+
+Inputs: un número entero mayor o igual a cero.  
+
+Outputs: reportar si el número se puede reordenar para que sea dividible por 5, o si 
+no se pueede hacer esto.  
+
+Pasos necesarios:  
+
+El usuario ingresa un número entero, mayor o igual a cero.  
+
+El programa lee los digitos del número.  
+
+Si uno de los dígitos es cero o cinco, entonces es posible hacer lo solicitado.  
+
+Si la condición se cumple, responder que sí se puede reordenar el número para que sea 
+divisible por 5.  
+
+Si la codición no se cumple, responder que no se puede reordenar el número para que sea 
+divisible por 5.  
+
+*Pseudocódigo:*
+
+Definir variables:  
+- número, string  
+- i, entera  
+- N, entera  
+- divisible, booleana
+
+Pregunta al usuario: "ingrese un número entero positivo, mayor o igual a cero".
+
+IF int(número) mayor o igual que cero THEN  
+N = longitud(número)  
+Divisible = False
+FOR i = 1 to N
+IF (caracter "i" es igual a 0) OR (caracter "i" es igual a 5)
+THEN Divisible = True
+
+IF Divisible = True THEN print("el número se puede reordenar para que sea divisible por 5")
+ELSE print("el número NO se puede reordenar para que sea divisible por 5")  
+
+FIN DEL PSEDOCÓDIGO.  

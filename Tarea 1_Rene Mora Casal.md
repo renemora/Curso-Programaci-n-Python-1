@@ -194,24 +194,24 @@ divisible por 5.
 Si la codición no se cumple, responder que no se puede reordenar el número para que sea 
 divisible por 5.  
 
-*Pseudocódigo:*
+*Pseudocódigo:*  
 
 Definir variables:  
 - número, string  
 - i, entera  
 - N, entera  
-- divisible, booleana
+- divisible, booleana  
 
-Pregunta al usuario: "ingrese un número entero positivo, mayor o igual a cero".
+Pregunta al usuario: "ingrese un número entero positivo, mayor o igual a cero".  
 
 IF int(número) mayor o igual que cero THEN  
 N = longitud(número)  
-Divisible = False
-FOR i = 1 to N
-IF (caracter "i" es igual a 0) OR (caracter "i" es igual a 5)
-THEN Divisible = True
+Divisible = False  
+FOR i = 1 to N  
+IF (caracter "i" es igual a 0) OR (caracter "i" es igual a 5)  
+THEN Divisible = True  
 
-IF Divisible = True THEN print("el número se puede reordenar para que sea divisible por 5")
+IF Divisible = True THEN print("el número se puede reordenar para que sea divisible por 5")  
 ELSE print("el número NO se puede reordenar para que sea divisible por 5")  
 
 FIN DEL PSEDOCÓDIGO.  

@@ -1,14 +1,14 @@
 string = input('Escriba una oración, no incluya tildes:')
 input_min = string.lower()
 input_min = input_min.replace(" ","")
-string2 = input_min[0:5]
+string2 = input_min[::-1]
 print(input_min)
-print(string2) # lo ignora!
+print(string2)
 
 if input_min != string2:
-    print('es un palíndromo')
+    print('NO es un palíndromo')
 else:
-    print('No es un palíndromo')
+    print('Es un palíndromo')
 
 # if input_min[0] == input_min[-1]
 #     print("Esta frase podría ser un palíndromo")

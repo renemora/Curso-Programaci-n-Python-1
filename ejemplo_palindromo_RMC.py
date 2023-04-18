@@ -3,9 +3,9 @@ input_min = string.lower()
 input_min = input_min.replace(" ","")
 string2 = input_min[0:5]
 print(input_min)
-print(string2)
+print(string2) # lo ignora!
 
-if input_min != input_min[::-1]:
+if input_min != string2:
     print('es un palíndromo')
 else:
     print('No es un palíndromo')

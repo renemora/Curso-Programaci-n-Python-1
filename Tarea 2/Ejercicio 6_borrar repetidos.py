@@ -11,6 +11,7 @@ numero = 1
 # ingresar la lista de números
 while numero != -1:
     numero = int(input("Ingresa un número entero positivo, escribe -1 para finalizar: "))
+    # el "if" es para que no incluya el -1 en la lista
     if numero != -1:
         lista1.append(numero)
     

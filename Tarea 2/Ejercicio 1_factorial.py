@@ -10,6 +10,7 @@ def factorial(n):
     else:
         return n*factorial(n-1)
     
+    
 
 # hay que dejar dos espacios entre la función y el programa.
 

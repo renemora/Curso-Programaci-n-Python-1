@@ -17,19 +17,22 @@ class Juego:
 
     # Se reparten las cartas iniciales a jugadores y Casa.
     def repartir_cartas_iniciales(self):
-        for jugador in self.jugadores:
-            naipe1 = D.Deck.sacar_carta()
+        for jugador in self.jugadores
+        # for i in enumerate(self.jugadores): 
+        # Pylint recomendó usar enumerate en lugar de range and len. 
+            # jugador = self.jugadores[i]
+            naipe1 = D.Deck.sacar_carta(self.deck)
             J.Jugador.recibir_carta(jugador, naipe1)
             print(jugador.nombre, "recibió", naipe1)
-            naipe2 = D.Deck.sacar_carta()
+            naipe2 = D.Deck.sacar_carta(self.deck)
             J.Jugador.recibir_carta(jugador, naipe2)
             print(jugador.nombre, "recibió", naipe2)
 
         for dealer in self.casa:
-            naipe1 = D.Deck.sacar_carta()
+            naipe1 = D.Deck.sacar_carta(self.deck)
             J.Jugador.recibir_carta(dealer, naipe1)
             print(dealer.nombre, "recibió X X")
-            naipe2 = D.Deck.sacar_carta()
+            naipe2 = D.Deck.sacar_carta(self.deck)
             J.Jugador.recibir_carta(dealer, naipe2)
             print(dealer.nombre, "recibió", naipe2)        
 
@@ -121,7 +124,7 @@ class Juego:
 
         D.Deck.mezclar_cartas(self.deck)
 
-        self.repartir_cartas_iniciales(self.jugadores, self.casa)
+        self.repartir_cartas_iniciales()
 
         for jugador in self.jugadores:
             self.jugar_turno(jugador)

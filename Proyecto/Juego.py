@@ -26,7 +26,6 @@ class Juego:
             print(jugador.nombre, "recibió", naipe2)
 
         for dealer in self.casa:
-            dealer.nombre = "la Casa"
             naipe1 = D.Deck.sacar_carta()
             J.Jugador.recibir_carta(dealer, naipe1)
             print(dealer.nombre, "recibió X X")
@@ -120,9 +119,9 @@ class Juego:
         print("¡Bienvenido al juego de Blackjack!")
         print("----------------------------------")
 
-        D.Deck.mezclar_cartas()
+        D.Deck.mezclar_cartas(self.deck)
 
-        self.repartir_cartas_iniciales()
+        self.repartir_cartas_iniciales(self.jugadores, self.casa)
 
         for jugador in self.jugadores:
             self.jugar_turno(jugador)
@@ -137,8 +136,13 @@ class Juego:
 
 
 # Esto es una prueba.
-Players = J.Jugador("Juan", "Pedro")
-Dealer = J.Jugador("La Casa")
+Jugadores = ["Juan", "Pedro"]
+Players = J.Jugador(Jugadores)
+Casa = ["La Casa"]
+Dealer = J.Jugador(Casa)
+
+print(Players)
+print(Dealer)
 
 Game = Juego(Players, Dealer)
 

@@ -3,9 +3,9 @@
 ### CURSO PROGRAACIÓN EN PYTHON, NIVEL BÁSICO  
 
 ### PROYECTO FINAL DEL CURSO  
-# Prof. Artudo Zamora  
-# Estudiante: René Mora Casal  
-# 22 de mayo de 2023  
+### Prof. Arturo Zamora  
+### Estudiante: René Mora Casal  
+### 22 de mayo de 2023  
 
 ### DESCRIPCIÓN DEL PROGRAMA ELABORADO (DOCUMENTACIÓN EXTERNA)  
 
@@ -131,7 +131,7 @@ self.jugadores". Sin embargo, el programa me decía que el objeto no era
 iterable, y no encontré una alternativa o solución.
 
 En forma similar con el despliegue de los registros (opciones 3 y 4), lo tuve  
-que hacer en una forma "poco eficiente", imprimiendo una por una las líneas
+que hacer en una forma "poco eficiente", imprimiendo una por una las líneas  
 -1, -2, -3, -4 y -5 pues no supe como hacerlo más corto.
 
 

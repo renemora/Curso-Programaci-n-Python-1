@@ -32,7 +32,7 @@ son el valor ("A", "2", "3", ..., "Q", "K"), el palo ("Corazones", "Oros",
 "Tréboles", "Bastos") y el puntaje (usualmente el valor de la carta, excepto  
 10 si es figura, 11 si es As). No se intentó darle dos valores al As.  
 
-- Clase **Deck**: rontiene una lista de 52 objetos Carta; se definen métodos  
+- Clase **Deck**: contiene una lista de 52 objetos Carta; se definen métodos  
 para mezclar aleatoriamente las cartas y sacar una carta aleatoria del mazo.  
 
 - Clase **Jugador**: esta clase representa un jugador en el juego. Tiene dos  
@@ -53,7 +53,7 @@ parte de unas listas predefinidas. Se creó una funciónn interna llamada
 obtener_puntaje(self), que permite calcular el puntaje de la carta y asignarlo.  
 
 - Clase **Deck**: no tiene parámetros (solo "self"). Se define una función  
-interna generar_mmazo(self) que genera el mazo o baraja de 52 cartas. Se  
+interna generar_mazo(self) que genera el mazo o baraja de 52 cartas. Se  
 definen dos funciones externas -es decir, que son llamadas en otros módulos-  
 muy importantes: mezclar_cartas(self) que mezcla aleatoriamente las cartas,  
 y sacar_carta(self) que saca la última carta de la lista, esta carta se borra  
@@ -103,7 +103,7 @@ El programa principal o "Main" despliega un menú de opciones:
 5. Salir.
 
 La programación del menú se basó en la tarea de la calculadora. Se define una  
-vaariable Salir, que al inicio es False y que solo se convierte en True si se  
+variable Salir, que al inicio es False y que solo se convierte en True si se  
 escoge la opción 5.
 
 Se incluyó un nombre por defecto para el jugador, en caso que se escoja  
@@ -115,15 +115,30 @@ como indicamos quedó de cinco líneas.
 Las opciones 4 y 5 despliegan los cinco últimos registros del Jugador y de la  
 Casa, respectivamente.
 
-**Comentarios**
+**Comentarios**  
+
 El proyecto aplica casi todo lo que hemos visto en el curso. Creo que logramos  
 implementar un 95% de lo solicitado en el proyecto.
+
+Preliminarme estuvimos investigando sobre los temas de Clases y de Programación  
+Orientada a Objetos, para poder entender lo que había que hacer. Luego busqué  
+ejemplos de programas en Python que implementaran el juego de Black Jack, pude  
+observar que no hay dos implementaciones iguales y la mayoría son muy complejas  
+y avanzadas. Para ciertas tareas busqué información en línea para poder  
+hacerlas, un ejemplo es la siguiente línea y función:
+
+print(f"Cartas: {', '.join(str(carta) for carta in dealer.cartas)}")
+
+que muestra las cartas de jugador.
 
 El programa o compilador ayuda bastante para localizar y entender los errores.  
 Sin embargo, después de escribir el programa y al ir viendo los errores, a  
 veces siento que fue por "prueba y error". Por ejemplo, darme cuenta de la  
 necesidad de poner "D.Deck.mezclar_cartas(self.deck)", lo inicial y lo de  
-adentro. En forma similar con "Player = J.Jugador(Jugador)".
+adentro. En forma similar con "Player = J.Jugador(Jugador)".  
+
+Siento que faltó más práctica y hacer más ejemplos en clase, es decir que  
+nosotros los estudiantes hagamos los ejemplos con la guía del profesor. 
 
 Hubo cosas que no supe implementar, no hubo forma. Por ejemplo, al inicio lo  
 traté de hacer para varios jugadores, con la instrucción "for jugador in  

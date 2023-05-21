@@ -12,6 +12,7 @@
 
 import Deck as D
 import Jugador as J
+import os
 
 
 class Juego:
@@ -88,33 +89,44 @@ class Juego:
         # Todos los posibles casos, incluidos casos especiales.
         if self.casa.puntaje == 21:
             print("La Casa tiene 21, ¡Pierdes!")
+            print()
         elif self.jugador.puntaje > 21:
             print(f"{self.jugador.nombre}: Te pasaste de 21, ¡Pierdes!")
+            print()
         elif self.casa.puntaje > 21:
             print("La Casa se pasó de 21, ¡Ganas!")
+            print()
         elif self.jugador.puntaje == 21 and self.casa.puntaje == 21:
             print("Ambos obtuvieron 21. ¡Empate!")
+            print()
         elif self.jugador.puntaje < 21 and self.jugador.puntaje > self.casa.puntaje:
             print(f"{self.jugador.nombre}: Superaste a la Casa, ¡Ganas!")
+            print()
         elif self.jugador.puntaje == self.casa.puntaje:
             print(f"{self.jugador.nombre}: ¡Empate!.")
+            print()
         elif self.jugador.puntaje > 21 and self.casa.puntaje > 21:
             print("Ambos se pasaron de 21, ¡Empate!.")
+            print()
         elif len(self.jugador.cartas) == 3 and self.jugador.cartas.valor in [7]:
         # Esto implica tener tres sietes, igual a 21.
             if self.casa.puntaje != 21: 
                 print(f"{self.jugador.nombre}:¡Tenés As y Figura! ¡Ganas!")
+                print()
         elif len(self.jugador.cartas) == 2 and self.jugador.puntaje == 21:
         # Esto solo es posible con As y Figura.
             if self.casa.puntaje != 21: 
                 print(f"{self.jugador.nombre}:¡Tenés As y Figura! ¡Ganas!")
+                print()
         elif len(self.jugador.cartas) == 5 and self.jugador.puntaje < 21:
         # Caso de cinco menores.
             if self.jugador.cartas.valor in [1, 2, 3, 4, 5, 6, 7, 8, 9]:
                 print(f"{self.jugador.nombre}: ¡Tenés cinco  menores! ¡Ganas!")
+                print()
         elif self.jugador.puntaje == 21 and self.casa.puntaje != 21:
         # Cualquier otro caso que sume 21.
             print(f"{self.jugador.nombre}:¡Tenés un Black Jack! ¡Ganas!")
+            print()
         else:
             print(f"{self.jugador.nombre}: La Casa te supera, ¡Pierdes!.")
             print()
@@ -126,10 +138,12 @@ class Juego:
         # Error inicial: TextIOWrapper.write() takes exactly one argument (4 given).
         # Procedemos a sumar todas las cadenas.
         archivo_1.close()
+        print()
         
         archivo_1 = open("registro_casa.txt", 'a')
         archivo_1.write(str(self.casa.nombre)+", "+str(self.casa.puntaje)+'\n')
         archivo_1.close()
+        print()
 
     # Mecánica básica del juego de Blackjack.
     def iniciar_juego(self):

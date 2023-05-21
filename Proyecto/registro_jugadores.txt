@@ -4,3 +4,7 @@
 ['Juan'], 26
 ['Juan'], 18
 ['Juan'], 13
+Pepe, 18
+Popeye, 22
+Popeye, 20
+Nicanor, 24

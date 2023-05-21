@@ -132,7 +132,7 @@ iterable, y no encontré una alternativa o solución.
 
 En forma similar con el despliegue de los registros (opciones 3 y 4), lo tuve  
 que hacer en una forma "poco eficiente", imprimiendo una por una las líneas
--1, -2, -3, -4 y -5 pues no supo como hacerlo más corto.
+-1, -2, -3, -4 y -5 pues no supe como hacerlo más corto.
 
 
 

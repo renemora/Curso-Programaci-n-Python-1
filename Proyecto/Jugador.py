@@ -4,7 +4,6 @@
 
 
 import Carta as C
-import Deck as D
 
 
 class Jugador:

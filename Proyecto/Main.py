@@ -4,7 +4,7 @@
 # 2. Jugar una partida.
 # 3. Mostrar las estadísticas Jugador.
 # 4. Mostrar estadísticas de la Casa.
-# 4. Salir.
+# 5. Salir.
 
 
 import Jugador as J

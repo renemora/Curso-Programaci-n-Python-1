@@ -49,7 +49,7 @@ esto se consigue que el programa princila sea muy corto (cinco líneas).
 *Paso 2: Definir lor parámetros y los métodos:*  
 
 - Clase **Carta**: se define con tres parámetros. El valor y el palo forman  
-parte de unas listas predefinidas. Se creó una funciónn interna llamada  
+parte de unas listas predefinidas. Se creó una función interna llamada  
 obtener_puntaje(self), que permite calcular el puntaje de la carta y asignarlo.  
 
 - Clase **Deck**: no tiene parámetros (solo "self"). Se define una función  

@@ -149,6 +149,11 @@ En forma similar con el despliegue de los registros (opciones 3 y 4), lo tuve
 que hacer en una forma "poco eficiente", imprimiendo una por una las líneas  
 -1, -2, -3, -4 y -5 pues no supe como hacerlo más corto.
 
+Otra cosa que no supe hacer: traté de definir unas variables llamadas  
+"status_jugador" y "status_casa", para poder guardar en los archivos texto  
+el status, es decir Perdió, Ganó o Empate. Sin embargo no logré que lo hiciera  
+(el programa no guardaba las variables en los archivos). 
+
 
 
 

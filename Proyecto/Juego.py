@@ -12,7 +12,7 @@
 
 import Deck as D
 import Jugador as J
-import os
+# import os
 
 
 class Juego:
